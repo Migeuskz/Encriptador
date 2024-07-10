@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+:root{
+    --color-primario: #1E1E1E;
+    --color-secundario: #454545;
+    --color-terciario: #e0ffff;
+    --color-cuarto: #69b4ff;
+    --color-quinto: #0085ff;
+    --color-sexto: #006fff;
+    --fuente-primaria: "Cabin", sans-serif;
+    --fuente-secundaria: "Overpass", sans-serif;
+}
+
+body{
+    background-color: var(--color-primario);
+    box-sizing: border-box;
+    color: white;
+}
+
+header{
+    display: flex;
+    gap: 2.4rem;
+    height: 4rem;
+    border: solid red;
+    padding: 2rem;
+}
+
+.foto__perfil{
+    
+}
+
+.titulo__app{
+    font-family: var(--fuente-primaria);
+    font-size: 3.2rem;
+}
+
+.titulo__datos{
+    font-family: var(--fuente-secundaria);
+    font-size: 2.4rem;
+}
+
+.contenido{
+    padding: 6% 15%;
+    display: flex;
+    gap: 3.4rem;
+}
+
+.encriptador{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.mensaje{
+    display: flex;
+    flex-direction: column;
+}
