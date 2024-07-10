@@ -1,3 +1,19 @@
+function obtenerTexto() {
+    return document.querySelector('#encriptador').value.trim().toLowerCase();
+}
+
+function encriptarTexto() {
+    let textoOriginal = obtenerTexto();
+    let textoEncriptado = conventirTexto(textoOriginal);
+    mostrarResultado(textoEncriptado);
+}
+
+function descodificarTexto() {
+    let textoEncriptado = obtenerTexto();
+    let textoNormal = desencriptarTexto(textoEncriptado);
+    mostrarResultado(textoNormal);
+}
+
 function conventirTexto(texto) {
     // empleamos una expresion regular para verificar una cadena de texto "/^[a-z]+$"
     if (/^[a-z]+$/.test(texto)) {
@@ -34,12 +50,19 @@ function desencriptarTexto(texto) {
 
 }
 
+function mostrarResultado(resultado) {
+    let mensajeTextarea = document.querySelector('#mensaje');
+    mensajeTextarea.value = resultado;
+}
+
+// let textoOriginal = "hola"
 
 
-let textoOriginal = "gato"
-let textoConvertido = conventirTexto(textoOriginal)
-let textoEncriptado = textoConvertido
-let textoNormal = desencriptarTexto(textoEncriptado)
+// let textoOriginal = obtenerTexto()
+// let textoConvertido = conventirTexto(textoOriginal)
+// let textoConvertido = conventirTexto(obtenerTexto)
+// let textoEncriptado = textoConvertido
+// let textoNormal = desencriptarTexto(textoEncriptado)
 
-console.log(textoConvertido)
-console.log(textoNormal)
+console.log('lol',obtenerTexto())
+// console.log(descodificarTexto(texto))

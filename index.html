@@ -21,25 +21,27 @@
 </head>
 
 <body>
-    <!-- <header>
-        <img src="./assets/perfil.jpg" class="foto__perfil" alt="foto de perfil">
+    <header>
+        <!-- <img src="./assets/perfil.jpg" class="foto__perfil" alt="foto de perfil"> -->
         <div class="encabezado">
             <h2 class="titulo__datos">Hecho por Miguel Angel Sanchez Papalotzi</h2>
             <h2 class="titulo__datos">Desarrollador Front-end</h2>
         </div>
-    </header> -->
+    </header>
     <main class="contenido">
         <section class="encriptador">
-            <!-- <h1 class="titulo__app">Encriptador</h1> -->
-            <textarea name="encriptador" id="encriptador" placeholder="Ingrese un mensaje aqui"></textarea>
+            <h1 class="titulo__app">Encriptador</h1>
+            <textarea class="encriptador__texto" id="encriptador" placeholder="Ingrese un mensaje aquí"></textarea>
             <div class="opciones__encriptador">
-                <button class="boton__encriptar">Encriptar</button>
-                <button class="boton__descodificar">Descodificar</button>
+                <button onclick="encriptarTexto()" class="boton__encriptar">Encriptar</button>
+                <button onclick="descodificarTexto()" class="boton__descodificar">Descodificar</button>
             </div>
+            <div id="resultado"></div>
         </section>
         <section class="mensaje">
-            <textarea name="mensaje" id="mensaje" disabled></textarea>
-            <button class="boton__descodificar">Copiar</button>
+            <!-- <input class="mensaje__texto" type="text" name="mensaje" id="mensaje" disabled> -->
+            <textarea class="mensaje__texto" name="mensaje" id="mensaje" disabled></textarea>
+            <button class="boton__copiar">Copiar</button>
         </section>
     </main>
 

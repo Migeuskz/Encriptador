@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-size: 10px;
 }
 
-:root{
+:root {
     --color-primario: #1E1E1E;
     --color-secundario: #454545;
     --color-terciario: #e0ffff;
@@ -15,13 +15,13 @@
     --fuente-secundaria: "Overpass", sans-serif;
 }
 
-body{
+body {
     background-color: var(--color-primario);
     box-sizing: border-box;
     color: var(--color-terciario);
 }
 
-header{
+header {
     display: flex;
     gap: 2.4rem;
     height: 4rem;
@@ -29,52 +29,55 @@ header{
     padding: 2rem;
 }
 
-.foto__perfil{
-    
-}
+.foto__perfil {}
 
-.titulo__app{
+.titulo__app {
     font-family: var(--fuente-primaria);
     font-size: 3.2rem;
 }
 
-.titulo__datos{
+.titulo__datos {
     font-family: var(--fuente-secundaria);
     font-size: 2.4rem;
 }
 
-.contenido{
-    padding: 6% 15%;
+.contenido {
+    padding: 5rem;
     display: flex;
     gap: 3.4rem;
-    justify-content:center;
+    justify-content: center;
 }
 
-.encriptador{
+.encriptador {
     display: flex;
     flex-direction: column;
     padding: 2.4rem;
     font-family: var(--fuente-primaria);
     gap: 3.4rem;
+    /* border: solid red; */
+
 }
 
-.opciones__encriptador{
+.encriptador__texto {
+    /* border: solid red; */
+    padding: 2rem;
+    color: var(--color-terciario);
+    font-size: 3.2rem;
+    width: 68rem;
+    /* height: 28.8rem; */
+    height: 80%;
+    border-radius: 12px;
+    background-color: transparent;
+    border: solid var(--color-quinto) 2px;
+    resize: none;
+}
+
+.opciones__encriptador {
     display: flex;
     gap: 2.4rem;
 }
-.mensaje{
-    border: solid red;
-    padding: 2.4rem;
-    display: flex;
-    flex-direction: column;
-    font-family: var(--fuente-primaria);
-    gap: 3.4rem;
-    height: 94.4rem;
-    width: 40rem;
-    border-radius: 12px;
-}
 
-.boton__encriptar{
+.boton__encriptar {
     background-color: var(--color-sexto);
     font-family: var(--fuente-secundaria);
     color: var(--color-terciario);
@@ -82,12 +85,56 @@ header{
     font-size: 16px;
     border-radius: 12px;
     border: solid 2px var(--color-sexto);
+    width: 33.8rem;
+    height: 6.7rem;
 }
 
-.boton__descodificar{
+.boton__descodificar {
     background-color: var(--color-primario);
     font-family: var(--fuente-secundaria);
     color: var(--color-terciario);
+    padding: 2.4rem;
+    font-size: 16px;
+    border-radius: 12px;
+    border: solid 2px var(--color-sexto);
+    width: 33.8rem;
+    height: 6.7rem;
+}
+
+.mensaje {
+    /* border: solid red; */
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--fuente-primaria);
+    gap: 3.4rem;
+    height: 80%;
+    /* height: 94.4rem; */
+    width: 40rem;
+    border-radius: 12px;
+    box-shadow: 18px 13px 23px -3px rgba(0, 111, 255, 0.58);
+    -webkit-box-shadow: 18px 13px 23px -3px rgba(0, 111, 255, 0.58);
+    -moz-box-shadow: 18px 13px 23px -3px rgba(0, 111, 255, 0.58);
+}
+
+.mensaje__texto {
+    width: 33.6rem;
+    height: 68rem;
+    background-color: transparent;
+    border-radius: 12px;
+    /* border: none; */
+    resize: none;
+    color: var(--color-terciario);
+    font-size: 3.2rem;
+}
+
+.boton__copiar {
+    background-color: var(--color-primario);
+    font-family: var(--fuente-secundaria);
+    color: var(--color-terciario);
+    width: 33.6rem;
+    height: 6.7rem;
     padding: 2.4rem;
     font-size: 16px;
     border-radius: 12px;
