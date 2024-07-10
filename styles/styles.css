@@ -18,14 +18,14 @@
 body{
     background-color: var(--color-primario);
     box-sizing: border-box;
-    color: white;
+    color: var(--color-terciario);
 }
 
 header{
     display: flex;
     gap: 2.4rem;
     height: 4rem;
-    border: solid red;
+    /* border: solid red; */
     padding: 2rem;
 }
 
@@ -47,15 +47,49 @@ header{
     padding: 6% 15%;
     display: flex;
     gap: 3.4rem;
+    justify-content:center;
 }
 
 .encriptador{
     display: flex;
     flex-direction: column;
-
+    padding: 2.4rem;
+    font-family: var(--fuente-primaria);
+    gap: 3.4rem;
 }
 
+.opciones__encriptador{
+    display: flex;
+    gap: 2.4rem;
+}
 .mensaje{
+    border: solid red;
+    padding: 2.4rem;
     display: flex;
     flex-direction: column;
+    font-family: var(--fuente-primaria);
+    gap: 3.4rem;
+    height: 94.4rem;
+    width: 40rem;
+    border-radius: 12px;
+}
+
+.boton__encriptar{
+    background-color: var(--color-sexto);
+    font-family: var(--fuente-secundaria);
+    color: var(--color-terciario);
+    padding: 2.4rem;
+    font-size: 16px;
+    border-radius: 12px;
+    border: solid 2px var(--color-sexto);
+}
+
+.boton__descodificar{
+    background-color: var(--color-primario);
+    font-family: var(--fuente-secundaria);
+    color: var(--color-terciario);
+    padding: 2.4rem;
+    font-size: 16px;
+    border-radius: 12px;
+    border: solid 2px var(--color-sexto);
 }
