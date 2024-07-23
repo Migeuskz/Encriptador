@@ -5,20 +5,24 @@
 }
 
 :root {
-    --color-primario: #1E1E1E;
-    --color-secundario: #454545;
-    --color-terciario: #e0ffff;
-    --color-cuarto: #69b4ff;
-    --color-quinto: #0085ff;
-    --color-sexto: #006fff;
+    --primary-100: #FF6600;
+    --primary-200: #ff983f;
+    --primary-300: #ffffa1;
+    --accent-100: #F5F5F5;
+    --accent-200: #929292;
+    --text-100: #FFFFFF;
+    --text-200: #e0e0e0;
+    --bg-100: #1D1F21;
+    --bg-200: #2c2e30;
+    --bg-300: #444648;
     --fuente-primaria: "Cabin", sans-serif;
     --fuente-secundaria: "Overpass", sans-serif;
 }
 
 body {
-    background-color: var(--color-primario);
+    background-color: var(--accent-100);
     box-sizing: border-box;
-    color: var(--color-terciario);
+    color: var(--bg-100);
 }
 
 header {
@@ -27,13 +31,16 @@ header {
     height: 4rem;
     /* border: solid red; */
     padding: 2rem;
+    background-color: var(--primary-200);
 }
-
-.foto__perfil {}
 
 .titulo__app {
     font-family: var(--fuente-primaria);
     font-size: 3.2rem;
+}
+
+.bot__encriptador {
+    height: 58rem;
 }
 
 .titulo__datos {
@@ -59,84 +66,109 @@ header {
 }
 
 .encriptador__texto {
-    /* border: solid red; */
+    border: solid var(--bg-100) 0.3rem;
     padding: 2rem;
     color: var(--color-terciario);
     font-size: 3.2rem;
     width: 68rem;
-    /* height: 28.8rem; */
     height: 80%;
     border-radius: 12px;
+    -webkit-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+    -moz-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+    box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
     background-color: transparent;
-    border: solid var(--color-quinto) 2px;
     resize: none;
 }
 
-.opciones__encriptador {
+.botones__encriptador {
     display: flex;
-    gap: 2.4rem;
+    justify-content: space-around;
 }
 
 .boton__encriptar {
-    background-color: var(--color-sexto);
-    font-family: var(--fuente-secundaria);
-    color: var(--color-terciario);
-    padding: 2.4rem;
-    font-size: 16px;
-    border-radius: 12px;
-    border: solid 2px var(--color-sexto);
-    width: 33.8rem;
+    background-color: var(--primary-100);
+    color: var(--accent-100);
     height: 6.7rem;
+    width: 32.8rem;
+    border: solid var(--bg-200) 0.2rem;
+    border-radius: 1.2rem ;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: var(--fuente-secundaria);
+    cursor: pointer;
+}
+
+.boton__encriptar:hover {
+    background-color: var(--primary-200);
 }
 
 .boton__descodificar {
-    background-color: var(--color-primario);
-    font-family: var(--fuente-secundaria);
-    color: var(--color-terciario);
-    padding: 2.4rem;
-    font-size: 16px;
-    border-radius: 12px;
-    border: solid 2px var(--color-sexto);
-    width: 33.8rem;
     height: 6.7rem;
+    width: 32.8rem;
+    background-color: var(--accent-200);
+    color: var(--accent-100);
+    border-radius: 1.2rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: var(--fuente-secundaria);
+    cursor: pointer;
+    -webkit-box-shadow: 0px 15px 0px -6px rgba(29, 31, 33, 1);
+    -moz-box-shadow: 0px 15px 0px -6px rgba(29, 31, 33, 1);
+    box-shadow: 0px 15px 0px -6px rgba(29, 31, 33, 1);
 }
 
-.mensaje {
-    /* border: solid red; */
-    padding: 2.4rem;
+.boton__descodificar:hover {
+    color: var(--bg-200);
+    background-color: var(--primary-300);
+}
+
+.modal{
+    display: none; /* Ocultar el modal por defecto */
+    position: fixed;
+    z-index: 1; /* Asegurarse de que esté por encima de otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Habilitar desplazamiento si es necesario */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content{
+    background-color: #fff;
+    margin: 15% auto; /* 15% desde la parte superior y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ancho del modal */
+    max-width: 600px; /* Máximo ancho del modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.footer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: var(--fuente-primaria);
-    gap: 3.4rem;
-    height: 80%;
-    /* height: 94.4rem; */
-    width: 40rem;
-    border-radius: 12px;
-    box-shadow: 18px 13px 23px -3px rgba(0, 111, 255, 0.58);
-    -webkit-box-shadow: 18px 13px 23px -3px rgba(0, 111, 255, 0.58);
-    -moz-box-shadow: 18px 13px 23px -3px rgba(0, 111, 255, 0.58);
-}
-
-.mensaje__texto {
-    width: 33.6rem;
-    height: 68rem;
-    background-color: transparent;
-    border-radius: 12px;
-    /* border: none; */
-    resize: none;
-    color: var(--color-terciario);
-    font-size: 3.2rem;
-}
-
-.boton__copiar {
-    background-color: var(--color-primario);
+    justify-content: center;
     font-family: var(--fuente-secundaria);
-    color: var(--color-terciario);
-    width: 33.6rem;
-    height: 6.7rem;
-    padding: 2.4rem;
-    font-size: 16px;
-    border-radius: 12px;
-    border: solid 2px var(--color-sexto);
+    background-color: var(--primary-200);
+    margin-top: 9rem;
 }
+
+.footer h2 {
+    padding: 2%;
+    font-size: 2.4rem;
+    color: var(--accent-100);
+}
+

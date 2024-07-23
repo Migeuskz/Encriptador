@@ -66,3 +66,21 @@ function mostrarResultado(resultado) {
 
 console.log('lol',obtenerTexto())
 // console.log(descodificarTexto(texto))
+
+function abrirModal(){
+    let modal = document.getElementById('modal')
+    modal.style.display = 'block'
+}
+
+function closeModal() {
+    let modal = document.getElementById("modal");
+    modal.style.display = "none";
+}
+
+// Cerrar el modal si el usuario hace clic fuera del contenido del modal
+window.onclick = function(event){
+    let modal = document.getElementById('modal')
+    if(event.target == modal){
+        modal.style.display = 'none'
+    }
+}
