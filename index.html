@@ -22,39 +22,29 @@
 
 <body>
     <header>
-        <!-- <img src="./assets/perfil.jpg" class="foto__perfil" alt="foto de perfil"> -->
-        <div class="encabezado">
-            <h2 class="titulo__datos">Hecho por Miguel Angel Sanchez Papalotzi</h2>
-            <h2 class="titulo__datos">Desarrollador Front-end</h2>
-        </div>
+        <h2 class="titulo__datos">
+            Miguel A. Sanchez Papalotzi
+        </h2>
     </header>
-    <main class="contenido">
-        <section class="encriptador">
-            <h1 class="titulo__app">Encriptador</h1>
-            <textarea class="encriptador__texto" id="encriptador" placeholder="Ingrese un mensaje aquí"></textarea>
-            <div class="botones__encriptador">
-                <button onclick="abrirModal()" class="boton__encriptar">Encriptar</button>
-                <!-- <button onclick="encriptarTexto()" class="boton__encriptar">Encriptar</button> -->
-                <button onclick="descodificarTexto()" class="boton__descodificar">Descodificar</button>
+
+    <main class="content">
+        <h1 class="titulo__app">Encriptador</h1>
+        <section class="contenido">
+            <div class="encriptador">
+                <textarea class="encriptador__texto" id="encriptador" placeholder="Ingrese un mensaje aquí"></textarea>
+                <div class="botones">
+                    <button class="encriptar">Encriptar</button>
+                    <button class="decencriptar">Decencriptar</button>
+                </div>
             </div>
-            <!-- <div id="resultado"></div> -->
+            <img src="./assets/Email.png" alt="encriptador contenido" class="persona1">
         </section>
 
-        <img class="bot__encriptador" src="./assets/Email.png" alt="robot encriptador">
-        <!-- <img class="bot__encriptador" src="./assets/bot.png" alt="robot encriptador"> -->
-        <!-- <section class="mensaje">
-            <textarea class="mensaje__texto" name="mensaje" id="mensaje" disabled></textarea>
-            <button class="boton__copiar">Copiar</button>
-        </section> -->
-        <div class="modal" id="modal">
-            <div class="modal-content">
-                <span class="close-button" onclick="closeModal()">&times;</span>
-                <p>Hola Mundo!!</p>
-            </div>
-        </div>
     </main>
 
-    <footer class="footer"><h2>&copy; 2024 Miguel Angel Sanchez Papalotzi Todos los derechos reservados. </h2></footer>
+    <footer class="footer">
+        <h2>&copy; 2024 Miguel Angel Sanchez Papalotzi Todos los derechos reservados. </h2>
+    </footer>
 
     <script src="./js/app.js"></script>
 </body>

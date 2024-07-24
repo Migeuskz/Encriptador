@@ -29,18 +29,12 @@ header {
     display: flex;
     gap: 2.4rem;
     height: 4rem;
-    /* border: solid red; */
     padding: 2rem;
     background-color: var(--primary-200);
 }
 
-.titulo__app {
-    font-family: var(--fuente-primaria);
-    font-size: 3.2rem;
-}
-
-.bot__encriptador {
-    height: 58rem;
+.content {
+    padding: 3%;
 }
 
 .titulo__datos {
@@ -48,21 +42,25 @@ header {
     font-size: 2.4rem;
 }
 
+.titulo__app {
+    font-family: var(--fuente-primaria);
+    font-size: 3.2rem;
+    text-align: center;
+    /* padding: 1%; */
+    /* border-bottom: solid 0.3rem var(--bg-100); */
+}
+
 .contenido {
-    padding: 5rem;
+    /* border: solid red; */
+    padding: 2%;
     display: flex;
-    gap: 3.4rem;
     justify-content: center;
+    gap: 5rem;
 }
 
 .encriptador {
-    display: flex;
-    flex-direction: column;
-    padding: 2.4rem;
-    font-family: var(--fuente-primaria);
-    gap: 3.4rem;
+    height: 48.8rem;
     /* border: solid red; */
-
 }
 
 .encriptador__texto {
@@ -71,40 +69,42 @@ header {
     color: var(--color-terciario);
     font-size: 3.2rem;
     width: 68rem;
-    height: 80%;
+    height: 70%;
     border-radius: 12px;
     -webkit-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
     -moz-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
     box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
     background-color: transparent;
     resize: none;
+
 }
 
-.botones__encriptador {
+.botones {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 5%;
 }
 
-.boton__encriptar {
+.encriptar {
     background-color: var(--primary-100);
     color: var(--accent-100);
     height: 6.7rem;
-    width: 32.8rem;
+    width: 30rem;
     border: solid var(--bg-200) 0.2rem;
-    border-radius: 1.2rem ;
+    border-radius: 1.2rem;
     font-size: 2.4rem;
     font-weight: 700;
     font-family: var(--fuente-secundaria);
     cursor: pointer;
 }
 
-.boton__encriptar:hover {
+.encriptar:hover {
     background-color: var(--primary-200);
 }
 
-.boton__descodificar {
+.decencriptar {
     height: 6.7rem;
-    width: 32.8rem;
+    width: 30rem;
     background-color: var(--accent-200);
     color: var(--accent-100);
     border-radius: 1.2rem;
@@ -117,45 +117,17 @@ header {
     box-shadow: 0px 15px 0px -6px rgba(29, 31, 33, 1);
 }
 
-.boton__descodificar:hover {
+
+.decencriptar:hover {
     color: var(--bg-200);
     background-color: var(--primary-300);
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(29, 31, 33, 1);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(29, 31, 33, 1);
+    box-shadow: 0px 0px 0px 0px rgba(29, 31, 33, 1);
 }
 
-.modal{
-    display: none; /* Ocultar el modal por defecto */
-    position: fixed;
-    z-index: 1; /* Asegurarse de que esté por encima de otros elementos */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Habilitar desplazamiento si es necesario */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-content{
-    background-color: #fff;
-    margin: 15% auto; /* 15% desde la parte superior y centrado horizontalmente */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Ancho del modal */
-    max-width: 600px; /* Máximo ancho del modal */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+.persona1 {
+    height: 48rem;
 }
 
 .footer {
@@ -172,3 +144,88 @@ header {
     color: var(--accent-100);
 }
 
+/* Media Querys */
+
+/* Mobile */
+@media (max-width:480px) {
+    body {
+        width: 100%;
+    }
+    
+    header {
+        /* width:30rem; */
+    }
+
+    .contenido {
+        flex-direction: column-reverse;
+        padding: 5%;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .titulo__datos {
+        font-size: 1.8rem;
+    }
+
+    .titulo__app {
+        font-size: 2.4rem;
+        padding: 5%;
+    }
+
+    .persona1 {
+        height: 30rem;
+        width: 30rem;
+    }
+
+    .encriptador {
+        /* border: solid red; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.4rem;
+    }
+
+    .encriptador__texto {
+        width: 21rem;
+        height: 32rem;
+        font-size: 1.6rem;
+        -webkit-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+        -moz-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+        box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+        /* padding-bottom: 1rem; */
+    }
+
+    .botones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 2rem; */
+        gap: 2.4rem;
+    }
+
+    .encriptar {
+        width: 29.5rem;
+        height: 4.9rem;
+        font-size: 1.6rem;
+    }
+
+    .decencriptar {
+        width: 29.5rem;
+        height: 4.9rem;
+        font-size: 1.6rem;
+    }
+
+    .footer h2 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+}
+
+/* Tablet */
+@media(max-width:768px) {
+}
+
+/* Laptop */
+@media(max-width:1024px) {}
