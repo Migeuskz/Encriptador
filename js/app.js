@@ -1,10 +1,44 @@
+function obtenerTexto() {
+    return document.querySelector('#encriptador').value
+}
 
-console.log('hola mundo')
-// console.log(descodificarTexto(texto))
+function encriptarTexto() {
+    let textoOriginal = obtenerTexto();
+    let textoEncriptado = validarTexto(textoOriginal)
+    mostrarResultado(textoEncriptado)
+}
 
-function abrirModal(){
-    let modal = document.getElementById('modal')
-    modal.style.display = 'block'
+
+function validarTexto(texto) {
+    // Expresión regular para validar letras minúsculas y espacios
+
+    if (/^[a-z\s]+$/.test(texto)) {
+        /* el método .replace() en JavaScript se utiliza para buscar una cadena
+          o una expresión regular en un string y reemplazarla con otra cadena. */
+        let vocalesConvertidas = texto
+            .replace(/e/g, "enter")
+            .replace(/i/g, "imes")
+            .replace(/a/g, "ai")
+            .replace(/o/g, "ober")
+            .replace(/u/g, "ufat");
+        return vocalesConvertidas
+    }else{
+        return "El texto debe contener solo letras en minusculas y sin caracteres especiales"
+    }
+}
+
+
+function mostrarResultado(resultado){
+    let mensaje = document.getElementById('mensaje')
+    mensaje.value = resultado
+}
+
+
+// console.log(encriptarTexto())
+function abrirModal() {
+    let modal = document.getElementById('modal');
+    modal.style.display = 'block';
+    encriptarTexto()
 }
 
 function closeModal() {
@@ -13,36 +47,14 @@ function closeModal() {
 }
 
 // Cerrar el modal si el usuario hace clic fuera del contenido del modal
-window.onclick = function(event){
-    let modal = document.getElementById('modal')
-    if(event.target == modal){
-        modal.style.display = 'none'
+window.onclick = function (event) {
+    let modal = document.getElementById('modal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
     }
 }
 
-function obtenerTexto(){
-    return document.querySelector('#encriptador').value
-}
-
-function encriptarTexto(){
-    let textoOriginal = obtenerTexto();
-}
-
-function validarCadena(cadena) {
-    // Expresión regular para validar letras minúsculas y espacios
-    const regex = /^[a-z\s]+$/;
-    
-    // Testeamos la cadena contra la expresión regular
-    return regex.test(cadena);
-}
-
-// Ejemplos de uso
-console.log(validarCadena("hola mundo"));  // true
-console.log(validarCadena("hola Mundo"));  // false (contiene una letra mayúscula)
-console.log(validarCadena("hola_mundo"));  // false (contiene un carácter especial)
-console.log(validarCadena("hola123"));     // false (contiene números)
-console.log(validarCadena("hola mundo!")); // false (contiene un carácter especial)
-
-
-
-console.log(encriptarTexto())
+// document.addEventListener('DOMContentLoaded', (event) => {
+//     closeModal();
+// });
+closeModal()

@@ -130,7 +130,7 @@ header {
     height: 48rem;
 }
 
-.modal{
+.modal {
     position: fixed;
     z-index: 1;
     left: 0;
@@ -141,7 +141,7 @@ header {
     background: rgba(0, 0, 0, 0.5);
 }
 
-.close__modal{
+.close__modal {
     color: #aaa;
     border-radius: 1.2rem;
     display: flex;
@@ -151,12 +151,12 @@ header {
     font-weight: 700;
 }
 
-.close__modal:hover{
+.close__modal:hover {
     color: red;
     text-decoration: none;
 }
 
-.modal__content{
+.modal__content {
     background-color: var(--accent-100);
     margin: 10% auto;
     padding: 2rem;
@@ -164,10 +164,11 @@ header {
     border: solid 1px var(--bg-300);
     width: 80%;
     max-width: 60rem;
-    box-shadow:0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    height: 60rem;
 }
 
-.mensaje{
+.mensaje {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,17 +177,33 @@ header {
     gap: 1rem;
 }
 
-.mensaje p{
+.mensaje p {
     font-size: 2.4rem;
     font-family: var(--fuente-primaria);
 }
 
-.mensaje__imagen{
+.mensaje__imagen {
     height: 28rem;
     width: 28rem;
 }
 
-.copiar{
+.mensaje__texto {
+    border: solid var(--bg-100) 0.3rem;
+    padding: 2rem;
+    color: var(--color-terciario);
+    font-size: 3.2rem;
+    width: 48rem;
+    /* height: 60%; */
+    border-radius: 12px;
+    -webkit-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+    -moz-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+    box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
+    background-color: transparent;
+    resize: none;
+    margin: 5%;
+}
+
+.copiar {
     height: 4.7rem;
     width: 30rem;
     background-color: var(--primary-300);
@@ -311,30 +328,37 @@ header {
         text-align: center;
     }
 
-    .modal__content{
+    .modal__content {
         width: 24rem;
+        height: 56rem;
         /* display: flex;
         flex-direction: column;
         align-items: center; */
     }
 
-    .close__modal{
+    .close__modal {
         font-size: 3.8rem;
         float: right;
     }
 
-    .mensaje__imagen{
-        height: 18rem;
-        width: 18rem;
+    .mensaje__imagen {
+        height: 16rem;
+        width: 16rem;
     }
 
-    .mensaje p{
-        font-size: 1.6rem;
-    }
-
-    .copiar{
+    .copiar {
         width: 24rem;
         height: 4rem;
+    }
+
+    .mensaje__texto {
+        width: 18rem;
+        height: 24rem;
+        margin: 10%;
+        font-size: 1.6rem;
+        -webkit-box-shadow: 12px 10px 0px 0px rgba(29, 31, 33, 1);
+        -moz-box-shadow: 12px 10px 0px 0px rgba(29, 31, 33, 1);
+        box-shadow: 12px 10px 0px 0px rgba(29, 31, 33, 1);
     }
 }
 
