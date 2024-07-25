@@ -8,6 +8,12 @@ function encriptarTexto() {
     mostrarResultado(textoEncriptado)
 }
 
+function descodificarTexto() {
+    let textoEncriptado = obtenerTexto();
+    let textoNormal = decencriptarTexto(textoEncriptado);
+    mostrarResultado(textoNormal);
+}
+
 
 function validarTexto(texto) {
     // Expresión regular para validar letras minúsculas y espacios
@@ -22,23 +28,52 @@ function validarTexto(texto) {
             .replace(/o/g, "ober")
             .replace(/u/g, "ufat");
         return vocalesConvertidas
-    }else{
+    } else {
         return "El texto debe contener solo letras en minusculas y sin caracteres especiales"
     }
 }
 
+function decencriptarTexto(texto) {
 
-function mostrarResultado(resultado){
+    if (/^[a-z\s]+$/.test(texto)) {
+
+        let vocalesConvertidas = texto
+            .replace(/enter/g, "e")
+            .replace(/imes/g, "i")
+            .replace(/ai/g, "a")
+            .replace(/ober/g, "o")
+            .replace(/ufat/g, "u");
+        return vocalesConvertidas
+    } else {
+        return "El texto debe contener solo letras en minusculas y sin caracteres especiales"
+    }
+}
+
+function mostrarResultado(resultado) {
     let mensaje = document.getElementById('mensaje')
     mensaje.value = resultado
 }
 
+// function copiar(){
+//     let texto = document.getElementById('#mensaje')
+//     let copiado = texto.value
 
-// console.log(encriptarTexto())
-function abrirModal() {
+//     return copiado
+//     console.log(copiado)
+// }
+
+
+// Abrir Modales
+
+function abrirModalEncriptar() {
     let modal = document.getElementById('modal');
     modal.style.display = 'block';
     encriptarTexto()
+}
+function abrirModalDecencriptar() {
+    let modal = document.getElementById('modal');
+    modal.style.display = 'block';
+    descodificarTexto()
 }
 
 function closeModal() {

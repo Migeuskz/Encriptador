@@ -177,23 +177,19 @@ header {
     gap: 1rem;
 }
 
-.mensaje p {
-    font-size: 2.4rem;
-    font-family: var(--fuente-primaria);
-}
 
 .mensaje__imagen {
-    height: 28rem;
-    width: 28rem;
+    height: 22rem;
+    width: 22rem;
 }
 
 .mensaje__texto {
     border: solid var(--bg-100) 0.3rem;
     padding: 2rem;
     color: var(--color-terciario);
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     width: 48rem;
-    /* height: 60%; */
+    height: 20rem;
     border-radius: 12px;
     -webkit-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
     -moz-box-shadow: 17px 18px 0px 0px rgba(29, 31, 33, 1);
