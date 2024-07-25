@@ -33,12 +33,26 @@
             <div class="encriptador">
                 <textarea class="encriptador__texto" id="encriptador" placeholder="Ingrese un mensaje aquí"></textarea>
                 <div class="botones">
-                    <button class="encriptar">Encriptar</button>
+                    <button onclick="encriptarTexto()" class="encriptar">Encriptar</button>
                     <button class="decencriptar">Decencriptar</button>
                 </div>
             </div>
             <img src="./assets/Email.png" alt="encriptador contenido" class="persona1">
         </section>
+
+        <div class="modal" id="modal">
+            <div class="modal__content">
+                <span class="close__modal">
+                    &times;
+                </span>
+
+                <div class="mensaje">
+                    <img class="mensaje__imagen" src="./assets/Tasks complete.png" alt="mensaje encriptado">
+                    <p id="mensaje" name="mensaje">Hola mundo</p>
+                    <button class="copiar">Copiar</button>
+                </div>
+            </div>
+        </div>
 
     </main>
 
