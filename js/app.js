@@ -54,13 +54,17 @@ function mostrarResultado(resultado) {
     mensaje.value = resultado
 }
 
-// function copiar(){
-//     let texto = document.getElementById('#mensaje')
-//     let copiado = texto.value
-
-//     return copiado
-//     console.log(copiado)
-// }
+function copiar(){
+    let textoCopiado = document.getElementById('mensaje').value
+    //navigator: es un metodo del navegador que copia el texto 
+    navigator.clipboard.writeText(textoCopiado).then(function(){
+        alert(`texto copiado es: ${textoCopiado} `)
+        
+    }).catch(function(err){
+        alert(`Error al copiar el texto: ${err}`)
+    })
+    
+}
 
 
 // Abrir Modales
